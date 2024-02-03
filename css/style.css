@@ -32,3 +32,37 @@ footer ul {
     vertical-align: top;
     padding: 20px;
 }
+.flexContainer {
+    display: flex;
+    width: 33%;
+    margin: 35px;
+    padding: 20px;
+    flex-direction: row;
+}
+img {
+    height: 200px;
+    width: 200px;
+}
+.workGrid div {
+    grid-area: myArea;
+}
+.workGrid {
+    display: grid;
+    grid-template-areas: 'myArea myArea myArea myArea' ;
+    grid-template-rows: 100px 300px;
+    grid-template-columns: auto auto auto auto;
+}
+@media only screen and (max-width: 600px) {
+    .flexContainer {
+      flex-direction: column;
+    }
+    .flexContainer div {
+        width: 100%;
+    }
+    .workGrid {
+        grid-template-areas: '100px 100px 100px 100px' ;
+        grid-template-rows: 100px 300px;
+        grid-template-columns: auto auto auto auto;
+    }
+
+  }
